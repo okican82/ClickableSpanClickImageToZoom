@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -87,6 +88,8 @@ public class Utils
 
     public static void loadLogoImageWithImageURL(Context context, String imagePath, ImageView target)
     {
-        Picasso.with(context).load(imagePath).fit().centerInside().into(target);
+        Picasso.Builder builder = new Picasso.Builder(context);
+        builder.downloader(new OkHttpDownloader(context));
+        builder.build().load(imagePath).fit().centerInside().into(target);
     }
 }
