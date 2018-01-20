@@ -68,7 +68,7 @@ public class Utils
 
 
     public static SpannableString trimSpannedAndConvertToSpannableString(Spanned spanned) {
-        return new SpannableString(Utils.trim(spanned));
+        return new SpannableString(trim(spanned));
     }
 
     public static CharSequence trim(CharSequence s) {
@@ -88,6 +88,7 @@ public class Utils
 
     public static void loadLogoImageWithImageURL(Context context, String imagePath, ImageView target)
     {
+        // handle http image redirect to https url
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttpDownloader(context));
         builder.build().load(imagePath).fit().centerInside().into(target);

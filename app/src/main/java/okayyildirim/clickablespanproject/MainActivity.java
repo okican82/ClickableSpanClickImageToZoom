@@ -7,7 +7,6 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -37,8 +36,8 @@ public class MainActivity extends Activity {
           });
 
         txt_tv = (TextView) findViewById(R.id.txt_tv);
-        //html Text with img url
 
+        //html Text with img url
         questionText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/><img src=\"http://www.kingglitter.com/wp-content/uploads/2015/10/request-a-sample-547-p.jpg\"/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/><img src=\"http://www.kingglitter.com/wp-content/uploads/2015/10/request-a-sample-547-p.jpg\"/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/><img src=\"http://www.kingglitter.com/wp-content/uploads/2015/10/request-a-sample-547-p.jpg\"/><br/>";
 
     }

@@ -57,7 +57,6 @@ public class Touch implements OnTouchListener {
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (mode == DRAG) {
-                    // ...
                     matrix.set(savedMatrix);
                     matrix.postTranslate(event.getX() - start.x, event.getY() - start.y);
                 } else if (mode == ZOOM) {
@@ -70,19 +69,7 @@ public class Touch implements OnTouchListener {
                 }
                 break;
         }
-        //view.getImageMatrix()
 
-        /*
-        float[] values = new float[9];
-        matrix.getValues(values);
-        float scaleX = values[Matrix.MSCALE_X];
-        //float globalY = values[Matrix.MSCALE_Y];
-
-        scaleX = Math.max(scaleX,1);
-        scaleX = Math.min(scaleX,6);
-
-        matrix.setScale(scaleX, scaleX);
-        //*/
 
         view.setImageMatrix(matrix);
         return true; // indicate event was handled
